@@ -1,0 +1,14 @@
+<h1> Reviews </h1>
+<body>
+  <div class="container">
+    <p> <%= link_to 'Write a review', new_review_path %> </p>
+    <% @reviews.each do |review| %>
+      <div class="img">
+      <h2> <%= review.name %> </h2>
+      <p> <%= review.category %> </p>
+      <p> <%= review.address %> </p>
+      <%= link_to 'Details', review_path(review) %>
+      </div>
+    <% end %>
+  </div>
+</body>
